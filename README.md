@@ -1,11 +1,11 @@
-# node-music-player
-A express servers that scans a directory for music and displays them in the index with a web audio player
+# Player de Música
+Um servidor node.js usando express varre o diretório "tracks" procurando arquivos de musica e depois retorna na index esta lista com players de audio.
 
-Put some music files in the tracks directory.
+Coloque alguns arquivos de musica no diretório "tracks".
 
-Run
+## Para rodar
 ```
-git clone https://github.com/edusig/node-music-player.git
+git clone https://github.com/0soft/node-music-player.git
 
 cd node-music-player
 
@@ -13,3 +13,16 @@ npm install
 
 npm start
 ```
+
+## O Teste
+
+### Alterar arquivos index.css e index.js na pasta public para chegar aos objetivos
+### Alterar o arquivo main.js para fazer alterações de html
+
+obs: Quando alterar o arquivo main.js é necessário reiniciar o servidor, parando e rodando novamente o `npm start`
+
+### Objetivos
+
+- Quando der play em uma música pare qualquer outra que estiver tocando.
+- Deixar o nome da música e o player na mesma linha de maneira responsiva.
+- Opcional: qualquer outra melhoria que achar interessante no design ou mesmo nas funcionalidades

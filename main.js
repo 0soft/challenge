@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
         </div>
         <div>
             <audio controls style="width: 100%" preload="metadata">
-                <source src="/${file}" type="audio/mpeg">
+                <source src="/track/${file}" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
@@ -25,18 +25,22 @@ app.get('/', function(req, res) {
         <html>
             <head>
                 <title>Music Player</title>
+                <link rel="stylesheet" href="/index.css" />
             </head>
             <body style="text-align:center;">
-                <h1>Music Player</h1>
-                <h2>Put MP3 files on the tracks directory to see them here</h2>
+                <h1 class="title">Music Player</h1>
+                <h2 class="subtitle">Put MP3 files on the tracks directory to see them here</h2>
                 ${tracks.join('')}
+                <script src="/index.js" />
             </body>
         </html>
     `)
 })
 
-app.get('/:track', function(req, res) {
+app.get('/track/:track', function(req, res) {
     res.sendFile(path.join(__dirname, 'tracks', req.params.track))
 })
+
+app.use(express.static(__dirname + '/public'));
 
 app.listen(9090)
