@@ -30,5 +30,5 @@ obs: Quando alterar o arquivo main.js é necessário reiniciar o servidor, paran
 ### Objetivos Full Stack
 Além dos objetivos de frontend acima, deve-se também:
 
-- Transformar o backend nodejs em um backend python
+- Transformar o backend nodejs em um backend python (utilizar uma framework como django, flask e afins preferêncialmente)
 - Criar uma api REST para listar as musicas e utilizá-la para popular o frontend
