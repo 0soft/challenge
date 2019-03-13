@@ -5,10 +5,6 @@ Coloque alguns arquivos de musica no diretório "tracks".
 
 ## Para rodar
 ```
-git clone https://github.com/0soft/node-music-player.git
-
-cd node-music-player
-
 npm install
 
 npm start
